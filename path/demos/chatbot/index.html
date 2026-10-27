@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harry & Kate - Love Story Chatbot</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar card">
+      <div class="badge">💖 Wedding Story Bot</div>
+      <h1 id="storyTitle">Harry & Kate</h1>
+      <p id="storyIntro" class="intro"></p>
+
+      <div class="info-box">
+        <h2>Come funziona</h2>
+        <p>
+          Questo bot non usa AI. Risponde con un sistema semantico basato su parole chiave,
+          sinonimi, tag e punteggio di corrispondenza.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <h2>Domande suggerite</h2>
+        <div id="sidebarQuestions" class="chips"></div>
+      </div>
+
+      <div class="info-box">
+        <h2>Dove modifichi tutto</h2>
+        <p>
+          Le domande, i tag, i pattern e le risposte sono nel file
+          <strong>js/storyData.js</strong>.
+          La logica del bot è in <strong>js/app.js</strong>.
+        </p>
+      </div>
+    </aside>
+
+    <main class="chat-panel card">
+      <header class="chat-header">
+        <div>
+          <p class="eyebrow">Chat interattiva</p>
+          <h2 id="chatTitle">Chiedimi qualcosa sulla loro storia</h2>
+          <p class="subtext">Prova con domande naturali come se stessi parlando con una persona.</p>
+        </div>
+        <div class="status">
+          <span class="status-dot"></span>
+          Bot attivo
+        </div>
+      </header>
+
+      <section id="chatMessages" class="chat-messages"></section>
+
+      <section id="quickActions" class="quick-actions"></section>
+
+      <footer class="chat-footer">
+        <textarea
+          id="userInput"
+          class="chat-input"
+          placeholder="Scrivi una domanda... esempio: come si sono conosciuti?"
+        ></textarea>
+        <button id="sendBtn" class="send-btn">Invia</button>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/storyData.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
